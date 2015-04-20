@@ -1,0 +1,7 @@
+#foreach file $[wildcard *.cpp]
+  #begin test_bin_target
+    #define TARGET $[patsubst %.cpp,%,$[file]]
+    #define SOURCES $[file]
+    #define LOCAL_LIBS rpi_cam tools
+  #end test_bin_target
+#end file

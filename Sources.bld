@@ -1,0 +1,9 @@
+#define DO_PCH 1
+
+#begin lib_target
+  #define PRECOMPILE_HEADERS rpi_cam/Camera.h
+  #if $[UNIX_PLATFORM]
+    #define OTHER_LIBS boost_system
+  #endif
+#end lib_target
+
